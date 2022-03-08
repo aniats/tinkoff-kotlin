@@ -9,4 +9,9 @@ class PlantPot(private val plant: Plant, private val potDesc: String) {
         println("You added plant fertilizer. Let's see what happens next")
         plant.blossom()
     }
+
+    fun isWaterNeeded(): Boolean {
+        val level = plant.getHydrationLevel()
+        return level < 45
+    }
 }

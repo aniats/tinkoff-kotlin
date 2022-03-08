@@ -9,9 +9,9 @@ interface Plant {
         println("This plant cannot blossom")
     }
 
-    fun hydration(previous: Int, days: Int): Int {
-        val res = previous - days * 10
-        if (res < 0) return 0
-        return res
-    }
+    /*
+     * I added a new method, because comparing strings in asserts does not seem
+     * like a good idea for unit tests
+     */
+    fun getHydrationLevel(): Int
 }
