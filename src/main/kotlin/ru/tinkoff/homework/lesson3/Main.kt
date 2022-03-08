@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson1
+package ru.tinkoff.homework.lesson3
 
 fun main() {
     val dragonTree = Tree("The Dragon Tree", 90)
