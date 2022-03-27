@@ -4,7 +4,11 @@ import kotlin.math.max
 import kotlin.math.min
 
 
-class Flower(override val name: String, private var isBisexual: Boolean = true, private var hydration: Int = 100) : Plant {
+class Flower(
+    override val name: String,
+    private var isBisexual: Boolean = true,
+    private var hydration: Int = 100
+) : Plant {
     init {
         /*
          * Bring `hydration` parameter to range 0-100.
@@ -13,11 +17,12 @@ class Flower(override val name: String, private var isBisexual: Boolean = true, 
         hydration = max(hydration, 0)
         hydration = min(hydration, 100)
     }
+
     /*
-    * This example demonstrates a possibility to add an additional method
-    * beside the interface's methods.
-    * In this example: an additional property and an additional method
-    */
+     * This example demonstrates a possibility to add an additional method
+     * beside the interface's methods.
+     * In this example: an additional property and an additional method
+     */
     fun breed() {
         if (isBisexual) {
             println("$name has sprouted! Look out for new leaves!")
@@ -27,8 +32,8 @@ class Flower(override val name: String, private var isBisexual: Boolean = true, 
     }
 
     /*
-    * This example demonstrates an implementation of the overriding method in the interface
-    */
+     * This example demonstrates an implementation of the overriding method in the interface
+     */
     override fun blossom() {
         println("$name is blossoming! The flower smells pleasantly fragrant")
     }
@@ -40,6 +45,9 @@ class Flower(override val name: String, private var isBisexual: Boolean = true, 
         println("$name is drying out. Use the watering can to water it")
     }
 
+    /*
+     * Get hydration level
+     */
     override fun getHydrationLevel(): Int {
         return hydration
     }
