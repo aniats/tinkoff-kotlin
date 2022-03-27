@@ -46,6 +46,7 @@ class TestCarService {
 
     @Test
     fun testDescription() {
+        val dollarToEuro = 0.91
         val expectation = listOf(
             CarLocalized(
                 Language.ENG,
@@ -53,7 +54,7 @@ class TestCarService {
                 Brand.RENAULT.toString(),
                 "Logan",
                 "Sedan",
-                12_000 * 0.91,
+                12_000 * dollarToEuro,
                 7.1
             ),
             CarLocalized(
@@ -62,7 +63,7 @@ class TestCarService {
                 Brand.MINI.toString(),
                 "Cooper",
                 "Hatchback",
-                31_900 * 0.91,
+                31_900 * dollarToEuro,
                 7.6
             ),
             CarLocalized(
@@ -71,7 +72,7 @@ class TestCarService {
                 Brand.KIA.toString(),
                 "Sportage",
                 "SUV",
-                35_000.0 * 0.91,
+                35_000.0 * dollarToEuro,
                 7.9
             ),
             CarLocalized(
@@ -80,7 +81,7 @@ class TestCarService {
                 Brand.NISSAN.toString(),
                 "X-trail",
                 "SUV",
-                45_000 * 0.91,
+                45_000 * dollarToEuro,
                 7.2
             ),
             CarLocalized(
@@ -89,7 +90,7 @@ class TestCarService {
                 Brand.LAMBORGINI.toString(),
                 "Countach",
                 "Sportcar",
-                2_640_000 * 0.91,
+                2_640_000 * dollarToEuro,
                 14.3
             ),
         )

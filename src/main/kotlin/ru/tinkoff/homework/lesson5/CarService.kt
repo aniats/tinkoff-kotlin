@@ -20,6 +20,32 @@ data class CarLocalized(
 
 object CarService {
     private const val dollarToEuro = 0.91
+    private const val dollarToYuan = 6.37
+
+    private fun getCarLocalized(
+        car: Car,
+        bodyType: String,
+        language: Language,
+        currency: Currency
+    ): CarLocalized {
+        val currencyRatio = when (currency) {
+            Currency.YUAN -> dollarToYuan;
+            Currency.EURO -> dollarToEuro;
+            else -> {
+                dollarToEuro
+            }
+        }
+        val price = car.dollarPrice * currencyRatio
+        return CarLocalized(
+            language,
+            currency,
+            car.brand.toString(),
+            car.name,
+            bodyType,
+            price,
+            car.gasMileage,
+        )
+    }
 
     private fun toEng(car: Car): CarLocalized {
         var bodyType: String = when (car.typeBody) {
@@ -28,15 +54,17 @@ object CarService {
             BodyType.HATCHBACK -> "Hatchback"
             BodyType.SUV -> "SUV"
         }
-        return CarLocalized(
-            Language.ENG,
-            Currency.EURO,
-            car.brand.toString(),
-            car.name,
-            bodyType,
-            car.dollarPrice * dollarToEuro,
-            car.gasMileage,
-        )
+        return getCarLocalized(car, bodyType, Language.ENG, Currency.EURO)
+    }
+
+    private fun toZh(car: Car): CarLocalized {
+        var bodyType: String = when (car.typeBody) {
+            BodyType.SEDAN -> "轿车"
+            BodyType.SPORTCAR -> "跑车"
+            BodyType.HATCHBACK -> "掀背车"
+            BodyType.SUV -> "越野车"
+        }
+        return getCarLocalized(car, bodyType, Language.ZH, Currency.YUAN)
     }
 
     fun description(cars: Collection<Car>): List<CarLocalized> {
