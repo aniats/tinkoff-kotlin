@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson1
+package ru.tinkoff.homework.fintech.lesson1
 
 interface Plant {
     val name: String

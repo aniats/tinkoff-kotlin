@@ -1,4 +1,4 @@
-package ru.tinkoff.fintech.lesson4
+package ru.tinkoff.homework.fintech.lesson4
 
 class MyQueue<T> {
     private var head: Node<T>? = null

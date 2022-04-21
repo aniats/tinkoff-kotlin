@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson1
+package ru.tinkoff.homework.fintech.lesson1
 
 class Tree(override val name: String, private val height: Int) : Plant {
     /*

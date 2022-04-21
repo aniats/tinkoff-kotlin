@@ -1,7 +1,8 @@
-package ru.tinkoff.homework.lesson5
+package ru.tinkoff.homework.fintech.lesson5
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import ru.tinkoff.homework.fintech.lesson5.*
 import kotlin.math.exp
 
 class TestCarService {

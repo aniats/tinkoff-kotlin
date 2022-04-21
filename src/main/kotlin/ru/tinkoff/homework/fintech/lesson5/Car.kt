@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson5
+package ru.tinkoff.homework.fintech.lesson5
 
 data class Car(
     val name: String,

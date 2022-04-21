@@ -1,7 +1,9 @@
-package ru.tinkoff.fintech.lesson4
+package ru.tinkoff.homework.fintech.lesson4
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
+import ru.tinkoff.homework.fintech.lesson4.MyStack
+import ru.tinkoff.homework.fintech.lesson4.myStackOf
 
 class MyStackTest {
     @Test

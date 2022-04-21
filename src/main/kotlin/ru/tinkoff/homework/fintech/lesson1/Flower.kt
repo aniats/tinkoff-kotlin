@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson1
+package ru.tinkoff.homework.fintech.lesson1
 
 
 class Flower(override val name: String, private var isBisexual: Boolean = true) : Plant {
