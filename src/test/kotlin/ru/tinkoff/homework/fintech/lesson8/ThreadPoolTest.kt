@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson8
+package ru.tinkoff.homework.fintech.lesson8
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.FeatureSpec

@@ -1,4 +1,4 @@
-package ru.tinkoff.homework.lesson8
+package ru.tinkoff.homework.fintech.lesson8
 
 import java.lang.Thread.currentThread
 import java.lang.Thread.sleep
