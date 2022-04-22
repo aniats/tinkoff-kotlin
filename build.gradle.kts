@@ -39,5 +39,5 @@ tasks.withType<Test> {
 }
 
 application {
-    mainClassName = "MainKt"
+    mainClassName = "Main"
 }
